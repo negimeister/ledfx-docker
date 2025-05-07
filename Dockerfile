@@ -1,5 +1,5 @@
 # -------- Stage 1: Build Container --------
-FROM ubuntu:jammy as builder
+FROM ubuntu:noble as builder
 
 ENV DEBIAN_FRONTEND=noninteractive
 
