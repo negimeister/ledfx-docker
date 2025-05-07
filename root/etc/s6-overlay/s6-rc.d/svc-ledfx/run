@@ -1,0 +1,3 @@
+#!/command/with-contenv bash
+# Start LedFx using s6
+exec /usr/bin/ledfx
