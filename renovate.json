@@ -2,10 +2,11 @@
   "extends": ["config:base"],
   "regexManagers": [
     {
-      "fileMatch": ["Dockerfile"],
+      "fileMatch": ["^Dockerfile$"],
       "matchStrings": [
-        "# renovate: datasource=pypi depName=(?<depName>ledfx)\nRUN pipx install 'ledfx==(?<currentValue>.*)'"
-      ]
+        "# renovate: datasource=pypi depName=(?<depName>ledfx)\nRUN pipx install 'ledfx==(?<currentValue>\\d+\\.\\d+\\.\\d+)'"
+      ],
+      "datasourceTemplate": "pypi"
     }
   ]
 }
