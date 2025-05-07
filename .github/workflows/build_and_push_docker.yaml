@@ -33,4 +33,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: negimeister/obs-auto-rtmp:${{ steps.python-version.outputs.version }}
+          tags: negimeister/ledfx:${{ steps.get_version.outputs.version }}
