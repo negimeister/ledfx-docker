@@ -20,7 +20,8 @@ RUN apt-get update && apt-get install -y \
 ENV PIPX_DEFAULT_PYTHON=/usr/bin/python3
 
 # Install ledfx
-RUN pipx install ledfx
+# renovate: datasource=pypi depName=ledfx
+RUN pipx install 'ledfx==2.0.108'
 
 # -------- Stage 2: Final Runtime Image --------
 FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy-version-fb2ecf57
